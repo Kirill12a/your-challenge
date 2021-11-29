@@ -9,10 +9,23 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var doneButton: UIButton!{
+        didSet{
+          
+        }
+    }
+    @IBOutlet weak var historyButton: UIButton!{
+        didSet{
+            
+        }
+    }
+    override func loadView() {
+        super.loadView()
+        CorenerRadiusMainTwoButtons.radiusMainTwoButtons.buttonCustomization(button: doneButton, button: historyButton)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
+            }
 
 
 }

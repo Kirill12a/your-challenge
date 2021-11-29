@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,87 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="yourChallenge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8N6-ki-mnh">
+                                <rect key="frame" x="20" y="112" width="169" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="eiZ-IO-olF"/>
+                                    <constraint firstAttribute="width" constant="169" id="lgp-C4-cez"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Выполнить">
+                                    <fontDescription key="titleFontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="25"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nke-Yp-bfi">
+                                <rect key="frame" x="201" y="112" width="169" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="169" id="16V-eH-AFw"/>
+                                    <constraint firstAttribute="height" constant="64" id="Shl-wi-vKX"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="История">
+                                    <fontDescription key="titleFontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="25"/>
+                                </buttonConfiguration>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CircleAdd" translatesAutoresizingMaskIntoConstraints="NO" id="uck-m3-4KN">
+                                <rect key="frame" x="58" y="264" width="274" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="Cxo-2F-YIj"/>
+                                    <constraint firstAttribute="width" constant="274" id="ysY-Xp-hWL"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="t 2" translatesAutoresizingMaskIntoConstraints="NO" id="NPe-JI-CER">
+                                <rect key="frame" x="16" y="573" width="168" height="237"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="168" id="2vt-fm-7U9"/>
+                                    <constraint firstAttribute="height" constant="237" id="elM-I8-ucu"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="t" translatesAutoresizingMaskIntoConstraints="NO" id="dAo-dK-ivL">
+                                <rect key="frame" x="202" y="523" width="168" height="237"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="168" id="JBg-Ag-vJc"/>
+                                    <constraint firstAttribute="height" constant="237" id="XpD-vL-nUt"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.34810784459999999" green="0.46143597359999999" blue="0.80227673050000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="NPe-JI-CER" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="4nS-fl-8vw"/>
+                            <constraint firstItem="NPe-JI-CER" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="8e8-df-VYv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uck-m3-4KN" secondAttribute="trailing" constant="58" id="AkG-2q-sHd"/>
+                            <constraint firstItem="dAo-dK-ivL" firstAttribute="leading" secondItem="NPe-JI-CER" secondAttribute="trailing" constant="18" id="Lmx-40-bUP"/>
+                            <constraint firstItem="uck-m3-4KN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="58" id="MgE-DY-OTr"/>
+                            <constraint firstItem="Nke-Yp-bfi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="68" id="QTw-ND-FyM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Nke-Yp-bfi" secondAttribute="trailing" constant="20" id="SDq-vP-iKh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dAo-dK-ivL" secondAttribute="bottom" constant="50" id="SeN-HQ-p1P"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dAo-dK-ivL" secondAttribute="trailing" constant="20" id="TsJ-Yz-Igt"/>
+                            <constraint firstItem="8N6-ki-mnh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Uxx-gD-99K"/>
+                            <constraint firstItem="8N6-ki-mnh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="68" id="ZJm-Dh-1o1"/>
+                            <constraint firstItem="uck-m3-4KN" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="220" id="hme-Gr-kqO"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="doneButton" destination="8N6-ki-mnh" id="lu9-Sf-sQc"/>
+                        <outlet property="historyButton" destination="Nke-Yp-bfi" id="BlO-VE-9gn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="18.46153846153846" y="83.175355450236964"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="CircleAdd" width="192" height="180"/>
+        <image name="t" width="123" height="200"/>
+        <image name="t 2" width="122" height="200"/>
+    </resources>
 </document>
