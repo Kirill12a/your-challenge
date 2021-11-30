@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A715D00698FB1172C63C7134 /* Pods_yourChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F12BE76FC6E6CB05831BBE3B /* Pods_yourChallenge.framework */; };
+		D28F392B275635EB00006499 /* CreateTaskVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28F392A275635EB00006499 /* CreateTaskVC.swift */; };
 		D2E4552627555EB600A1B0C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E4552527555EB600A1B0C1 /* AppDelegate.swift */; };
 		D2E4552827555EB600A1B0C1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E4552727555EB600A1B0C1 /* SceneDelegate.swift */; };
 		D2E4552A27555EB600A1B0C1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E4552927555EB600A1B0C1 /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		879E55F6E95DBD3CDDC8D303 /* Pods-yourChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yourChallenge.release.xcconfig"; path = "Target Support Files/Pods-yourChallenge/Pods-yourChallenge.release.xcconfig"; sourceTree = "<group>"; };
 		9D58078DA2C4478DBF7572B7 /* Pods-yourChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yourChallenge.debug.xcconfig"; path = "Target Support Files/Pods-yourChallenge/Pods-yourChallenge.debug.xcconfig"; sourceTree = "<group>"; };
+		D28F392A275635EB00006499 /* CreateTaskVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTaskVC.swift; sourceTree = "<group>"; };
 		D2E4552227555EB600A1B0C1 /* yourChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = yourChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2E4552527555EB600A1B0C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2E4552727555EB600A1B0C1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				D2E4552527555EB600A1B0C1 /* AppDelegate.swift */,
 				D2E4552727555EB600A1B0C1 /* SceneDelegate.swift */,
 				D2E4552927555EB600A1B0C1 /* ViewController.swift */,
+				D28F392A275635EB00006499 /* CreateTaskVC.swift */,
 				D2E4553927556CA100A1B0C1 /* ViewControllerFunc */,
 				D2E4552B27555EB600A1B0C1 /* Main.storyboard */,
 				D2E4552E27555EB700A1B0C1 /* Assets.xcassets */,
@@ -202,6 +205,7 @@
 				D2E4553B27556CD400A1B0C1 /* CorenerRadiusMainTwoButtons.swift in Sources */,
 				D2E4552A27555EB600A1B0C1 /* ViewController.swift in Sources */,
 				D2E4552627555EB600A1B0C1 /* AppDelegate.swift in Sources */,
+				D28F392B275635EB00006499 /* CreateTaskVC.swift in Sources */,
 				D2E4552827555EB600A1B0C1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

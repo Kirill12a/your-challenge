@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -79,6 +80,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addTaskButton" destination="uck-m3-4KN" id="AIS-w2-Fjz"/>
                         <outlet property="doneButton" destination="8N6-ki-mnh" id="lu9-Sf-sQc"/>
                         <outlet property="historyButton" destination="Nke-Yp-bfi" id="BlO-VE-9gn"/>
                     </connections>
@@ -87,10 +89,28 @@
             </objects>
             <point key="canvasLocation" x="18.46153846153846" y="83.175355450236964"/>
         </scene>
+        <!--Create TaskVC-->
+        <scene sceneID="ZWK-Ee-hcu">
+            <objects>
+                <viewController id="rQr-4A-ivg" customClass="CreateTaskVC" customModule="yourChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Yur-M5-PxL">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="rSP-YA-vya"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xao-ks-Mj8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="916" y="111"/>
+        </scene>
     </scenes>
     <resources>
         <image name="CircleAdd" width="192" height="180"/>
         <image name="t" width="123" height="200"/>
         <image name="t 2" width="122" height="200"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

@@ -16,7 +16,10 @@ class CorenerRadiusMainTwoButtons{
         func buttonSettings(button: UIButton){
             button.layer.cornerRadius = 32.0
             button.layer.borderWidth = 4
-            button.layer.borderColor = UIColor(red: 224, green: 65, blue: 60, alpha: 100).cgColor
+            button.layer.borderColor = 
+            UIColor(red: 224, green: 65, blue: 60, alpha: 100).cgColor
+//            UIColor.red.cgColor
+          
         }
         //MARK: - First Button
         buttonSettings(button: buttonOne)
