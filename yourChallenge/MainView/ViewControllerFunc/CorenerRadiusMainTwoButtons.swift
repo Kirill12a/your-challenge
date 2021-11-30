@@ -8,7 +8,11 @@
 import Foundation
 import UIKit
 
-class CorenerRadiusMainTwoButtons{
+protocol RadiusAndBorder{
+    func buttonCustomization(button buttonOne: UIButton, button buttonTwo: UIButton)
+}
+
+final class CorenerRadiusMainTwoButtons: RadiusAndBorder{
     static let radiusMainTwoButtons = CorenerRadiusMainTwoButtons() // singltone
     
     func buttonCustomization(button buttonOne: UIButton, button buttonTwo: UIButton){

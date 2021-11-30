@@ -65,6 +65,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D28F39302756C51600006499 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				D2E4552927555EB600A1B0C1 /* ViewController.swift */,
+				D2E4553927556CA100A1B0C1 /* ViewControllerFunc */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
 		D2E4551927555EB600A1B0C1 = {
 			isa = PBXGroup;
 			children = (
@@ -88,9 +97,8 @@
 			children = (
 				D2E4552527555EB600A1B0C1 /* AppDelegate.swift */,
 				D2E4552727555EB600A1B0C1 /* SceneDelegate.swift */,
-				D2E4552927555EB600A1B0C1 /* ViewController.swift */,
+				D28F39302756C51600006499 /* MainView */,
 				D28F392A275635EB00006499 /* CreateTaskVC.swift */,
-				D2E4553927556CA100A1B0C1 /* ViewControllerFunc */,
 				D2E4552B27555EB600A1B0C1 /* Main.storyboard */,
 				D2E4552E27555EB700A1B0C1 /* Assets.xcassets */,
 				D2E4553027555EB700A1B0C1 /* LaunchScreen.storyboard */,
