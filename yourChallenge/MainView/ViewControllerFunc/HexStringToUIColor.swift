@@ -15,15 +15,12 @@ final class HexStringToUIColor{
     /// - Returns: цвет, который конвертируется в rgb
     func hexStringToUIColor (hex:String) -> UIColor {
         var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
-
         if (cString.hasPrefix("#")) {
             cString.remove(at: cString.startIndex)
         }
-
         if ((cString.count) != 6) {
             return UIColor.gray
         }
-
         var rgbValue:UInt32 = 0
         Scanner(string: cString).scanHexInt32(&rgbValue)
         return UIColor(
