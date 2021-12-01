@@ -7,8 +7,26 @@
 
 import UIKit
 
-class CreateTaskVC: UIViewController {
+class CreateTaskVC: UIViewController { // привет
+    @IBOutlet weak var welcomeTextSV: UIStackView! {
+        didSet{
+            welcomeTextSV.transform = CGAffineTransform(rotationAngle:37.3)
+        }
+    }
 
+    @IBOutlet weak var welcomTextSecondSV: UIStackView! { // напиши
+        didSet{
+            welcomTextSecondSV.transform = CGAffineTransform(rotationAngle: 38.2)
+        }
+    }
+
+    @IBOutlet weak var goToTheTaskCreationScreen: UIButton!{
+        didSet{
+            goToTheTaskCreationScreen.layer.cornerRadius = 15
+//            34
+//            goToTheTaskCreationScreen.layer.borderWidt
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,4 +44,6 @@ class CreateTaskVC: UIViewController {
     }
     */
 
+    
+    
 }

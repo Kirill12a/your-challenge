@@ -44,23 +44,9 @@ class ViewController: UIViewController {
         UIView.animate(withDuration: 2, delay: 0.5, options: .curveEaseInOut) {
             self.addTaskButton.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi))
         } completion: {  _ in
-                self.showMainApp()
+            ShowViewController.showFunc.showMainApp(nameViewIdentifier: "CreateTaskVC")
         }
 
     }
-    
-    
-    func showMainApp(){
-        let mainAppViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "CreateTaskVC")
-        
-        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene, let sceneDelegate = windowScene.delegate as? SceneDelegate, let window = sceneDelegate.window{
-            
-            window.rootViewController = mainAppViewController
-            UIView.transition(with: window, duration: 0.25, options: .transitionCrossDissolve, animations: nil, completion: nil)
-        }
-        
-    }
-
-
 }
 
