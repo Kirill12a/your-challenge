@@ -29,7 +29,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad(){
         super.viewDidLoad()
-
+        
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
         addTaskButton.isUserInteractionEnabled = true
         addTaskButton.addGestureRecognizer(tapGestureRecognizer)

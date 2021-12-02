@@ -3,7 +3,7 @@
 //  yourChallenge
 //
 //  Created by Kirill Drozdov on 29.11.2021.
-//
+// 8 поинтов tralling 
 
 import UIKit
 

@@ -7,7 +7,13 @@
 
 import UIKit
 
+
+
+
 class CreateTaskVC: UIViewController { // привет
+    
+    
+    
     @IBOutlet weak var welcomeTextSV: UIStackView! {
         didSet{
             welcomeTextSV.transform = CGAffineTransform(rotationAngle:37.3)
@@ -23,27 +29,24 @@ class CreateTaskVC: UIViewController { // привет
     @IBOutlet weak var goToTheTaskCreationScreen: UIButton!{
         didSet{
             goToTheTaskCreationScreen.layer.cornerRadius = 15
-//            34
-//            goToTheTaskCreationScreen.layer.borderWidt
+
         }
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
-        // Do any additional setup after loading the view.
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+        goToTheTaskCreationScreen.isUserInteractionEnabled = true
+        goToTheTaskCreationScreen.addGestureRecognizer(tapGestureRecognizer)
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+            // нажатие на плюс
+    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer){
+        let tappedButton = tapGestureRecognizer.view as! UIButton
+        ShowViewController.showFunc.showMainApp(nameViewIdentifier: "WriteTextTaskVC")
+        
     }
-    */
-
     
     
 }
