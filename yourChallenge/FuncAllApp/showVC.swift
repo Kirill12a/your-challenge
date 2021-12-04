@@ -8,10 +8,7 @@
 import Foundation
 import UIKit
 
-
 final class ShowViewController{
-    
-
         
     static var showFunc = ShowViewController()
     

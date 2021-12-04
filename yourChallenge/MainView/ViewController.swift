@@ -6,18 +6,15 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var addTaskButton: UIImageView!{
         didSet{
-            print("кнопка создана®")
-        }
+            print("кнопка создана®")}
     }
     @IBOutlet weak var doneButton: UIButton!{
-        didSet{
-
-        }
+        didSet{}
+        
     }
     @IBOutlet weak var historyButton: UIButton!{
-        didSet{
-            
-        }
+        didSet{}
+        
     }
     
     

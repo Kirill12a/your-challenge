@@ -50,10 +50,7 @@ class WriteTextTaskVC: UIViewController, UITextFieldDelegate {
         // нажатие кнопки
     @IBAction func createTaskButton(_ sender: UIButton) {
         var viewControllerFirst = ShowViewController.showFunc.showMainApp(nameViewIdentifier: "ViewController") 
-       
-        
-        
-        
+
     }
     
     override func viewDidLoad() {
