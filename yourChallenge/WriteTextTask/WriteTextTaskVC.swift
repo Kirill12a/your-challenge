@@ -8,14 +8,16 @@
 import UIKit
 
 /// Экран, на котором идет заполнение задачаи 
-class WriteTextTaskVC: UIViewController {
-
+class WriteTextTaskVC: UIViewController, UITextFieldDelegate {
+    var modelData: ModelWriteDataTask?
+    
+   
+    
     @IBOutlet weak var constarintButtonADdTask: NSLayoutConstraint!
     @IBOutlet weak var constraintSecondTFTralling: NSLayoutConstraint!
     @IBOutlet weak var writeTaskTF: UITextField!{
         didSet{
             writeTaskTF.layer.cornerRadius = 21.0
-            
         }
     }
     @IBOutlet weak var writeDataTF: UITextField!{
@@ -31,7 +33,7 @@ class WriteTextTaskVC: UIViewController {
     @IBOutlet weak var trallingRightImageConstarint: NSLayoutConstraint!
     
     @IBOutlet weak var leadingLeftImageConstraint: NSLayoutConstraint!
-    //Сделать анимацию для появления картинок
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         super.viewDidLoad()
@@ -45,10 +47,33 @@ class WriteTextTaskVC: UIViewController {
             self.view.layoutIfNeeded()
         })
     }
-        
-       
+        // нажатие кнопки
+    @IBAction func createTaskButton(_ sender: UIButton) {
+      
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.writeDataTF.delegate = self
+        self.writeTaskTF.delegate = self
+        
+    }
+    
+    /// Чтобы при нажжатие done совершался переход на next textField - ()
+    /// - Parameter textField: текст филд, заданный в коде
+    /// - Returns: да или нет
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        switch textField{
+        case writeTaskTF:
+            writeDataTF.becomeFirstResponder()
+        case writeDataTF:
+            textField.resignFirstResponder()
+        default:
+            textField.resignFirstResponder()
+        }
+        return false
+        
+
     }
     
     override func loadView() {
@@ -58,16 +83,5 @@ class WriteTextTaskVC: UIViewController {
         constraintSecondTFTralling.constant = -200
         constarintButtonADdTask.constant = -200
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
+

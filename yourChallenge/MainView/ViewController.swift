@@ -1,6 +1,9 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var writeScreen = WriteTextTaskVC()
+    
     @IBOutlet weak var addTaskButton: UIImageView!{
         didSet{
             print("кнопка создана®")
@@ -29,6 +32,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad(){
         super.viewDidLoad()
+        
+        
         
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
         addTaskButton.isUserInteractionEnabled = true

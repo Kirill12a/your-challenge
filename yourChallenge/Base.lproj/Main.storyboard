@@ -78,6 +78,7 @@
                             <constraint firstItem="uck-m3-4KN" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="220" id="hme-Gr-kqO"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="hqK-el-5hF"/>
                     <connections>
                         <outlet property="addTaskButton" destination="uck-m3-4KN" id="AIS-w2-Fjz"/>
                         <outlet property="doneButton" destination="8N6-ki-mnh" id="lu9-Sf-sQc"/>
@@ -249,14 +250,14 @@
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Дэдлан" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ld2-3A-26u">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Срок" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ld2-3A-26u">
                                 <rect key="frame" x="16" y="301" width="92.666666666666671" height="29"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="25"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Kirill" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IK4-KV-ZNL">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IK4-KV-ZNL">
                                 <rect key="frame" x="125.66666666666667" y="189" width="212.33333333333331" height="47"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -267,15 +268,15 @@
                                 </constraints>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="25"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Kirill" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xmi-Rv-fEF">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xmi-Rv-fEF">
                                 <rect key="frame" x="125.66666666666667" y="292" width="212.33333333333331" height="47"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" red="0.3481169939" green="0.4612581134" blue="0.79855066539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="25"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I1A-FG-d6b">
                                 <rect key="frame" x="98" y="416" width="194" height="60"/>
@@ -285,9 +286,12 @@
                                 </constraints>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Создать цель                                       ">
+                                <buttonConfiguration key="configuration" style="plain" title="  Создать цель                                       ">
                                     <fontDescription key="titleFontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="25"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="createTaskButton:" destination="wSG-yh-r2e" eventType="touchUpInside" id="VrL-lU-cks"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ml0-30-lOX"/>
@@ -312,6 +316,7 @@
                             <constraint firstItem="xmi-Rv-fEF" firstAttribute="top" secondItem="IK4-KV-ZNL" secondAttribute="bottom" constant="56" id="eTW-Kr-2jk"/>
                             <constraint firstItem="Ml0-30-lOX" firstAttribute="bottom" secondItem="HIb-LK-JUV" secondAttribute="bottom" constant="43" id="gUT-uy-TkJ"/>
                             <constraint firstItem="dbQ-W7-jtb" firstAttribute="top" secondItem="Ml0-30-lOX" secondAttribute="top" constant="29" id="hyU-Mz-6Rx"/>
+                            <constraint firstItem="gX1-3R-zMo" firstAttribute="leading" secondItem="Ml0-30-lOX" secondAttribute="leading" constant="31" id="hzt-63-UNE"/>
                             <constraint firstItem="xmi-Rv-fEF" firstAttribute="top" secondItem="IK4-KV-ZNL" secondAttribute="bottom" constant="56" id="jeD-ng-fXd"/>
                             <constraint firstItem="Ml0-30-lOX" firstAttribute="trailing" secondItem="dbQ-W7-jtb" secondAttribute="trailing" constant="72.5" id="nM5-WD-I9c"/>
                             <constraint firstItem="xmi-Rv-fEF" firstAttribute="width" secondItem="IK4-KV-ZNL" secondAttribute="width" id="nru-hT-uqF"/>
