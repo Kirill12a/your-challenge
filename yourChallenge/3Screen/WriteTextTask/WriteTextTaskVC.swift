@@ -7,14 +7,20 @@
 
 import UIKit
 
+protocol  SendDataInFirstVCDelegate{
+    func sendData(dataOne: String, dataTwo: String)
+}
+
 /// Экран, на котором идет заполнение задачаи 
 class WriteTextTaskVC: UIViewController, UITextFieldDelegate {
     var modelData: ModelWriteDataTask?
     
-   
+    var delegate: SendDataInFirstVCDelegate? // delegate
+
     
     @IBOutlet weak var constarintButtonADdTask: NSLayoutConstraint!
     @IBOutlet weak var constraintSecondTFTralling: NSLayoutConstraint!
+  
     @IBOutlet weak var writeTaskTF: UITextField!{
         didSet{
             writeTaskTF.layer.cornerRadius = 21.0
@@ -49,7 +55,11 @@ class WriteTextTaskVC: UIViewController, UITextFieldDelegate {
     }
         // нажатие кнопки
     @IBAction func createTaskButton(_ sender: UIButton) {
-        var viewControllerFirst = ShowViewController.showFunc.showMainApp(nameViewIdentifier: "ViewController") 
+        var viewControllerFirst = ShowViewController.showFunc.showMainApp(nameViewIdentifier: "ViewController")
+        
+        let textOne = writeTaskTF.text
+        let textTwo = writeDataTF.text
+        delegate?.sendData(dataOne: textOne!, dataTwo: textTwo!)
 
     }
     

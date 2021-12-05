@@ -1,12 +1,25 @@
 import UIKit
 
-class ViewController: UIViewController {
+
+struct modelData{
+    var task:String
+    var deadLine:String
+}
+
+class ViewController: UIViewController, SendDataInFirstVCDelegate {
+    
+    
     
     var writeScreen = WriteTextTaskVC()
+    
+    
+    var array4s = [modelData]()
+    var model: modelData!
     
     @IBOutlet weak var addTaskButton: UIImageView!{
         didSet{
             print("кнопка создана®")}
+        
     }
     @IBOutlet weak var doneButton: UIButton!{
         didSet{}
@@ -22,6 +35,9 @@ class ViewController: UIViewController {
         super.loadView()
         CorenerRadiusMainTwoButtons.radiusMainTwoButtons.buttonCustomization(button: doneButton, button: historyButton) // радиус для двух кнопок задается с с другого класса.
         
+        print("Создали")
+        print("Элементы массива равны: \(array4s)")
+        
 
     }
     
@@ -29,7 +45,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad(){
         super.viewDidLoad()
-        
         
         
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
@@ -50,5 +65,18 @@ class ViewController: UIViewController {
         }
 
     }
+    
+    var valueOne = ""
+    var valueTwo = ""
+    func sendData(dataOne: String, dataTwo: String) {
+        valueOne = dataOne
+        valueTwo = dataTwo
+        
+        var createArray = modelData(task: valueOne, deadLine: valueTwo)
+        array4s.append(createArray)
+        
+        print(array4s)
+    }
+    
 }
 

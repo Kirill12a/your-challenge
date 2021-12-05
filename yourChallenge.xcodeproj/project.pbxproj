@@ -121,6 +121,30 @@
 			path = FuncAllApp;
 			sourceTree = "<group>";
 		};
+		D2BD63F1275D470400658052 /* 1Screen */ = {
+			isa = PBXGroup;
+			children = (
+				D28F39302756C51600006499 /* MainView */,
+			);
+			path = 1Screen;
+			sourceTree = "<group>";
+		};
+		D2BD63F2275D471200658052 /* 2Screen */ = {
+			isa = PBXGroup;
+			children = (
+				D24DA7F527588CF800808ADF /* CreateTask */,
+			);
+			path = 2Screen;
+			sourceTree = "<group>";
+		};
+		D2BD63F3275D471900658052 /* 3Screen */ = {
+			isa = PBXGroup;
+			children = (
+				D24DA7F627588D0200808ADF /* WriteTextTask */,
+			);
+			path = 3Screen;
+			sourceTree = "<group>";
+		};
 		D2E4551927555EB600A1B0C1 = {
 			isa = PBXGroup;
 			children = (
@@ -142,12 +166,12 @@
 		D2E4552427555EB600A1B0C1 /* yourChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				D2BD63F1275D470400658052 /* 1Screen */,
+				D2BD63F3275D471900658052 /* 3Screen */,
+				D2BD63F2275D471200658052 /* 2Screen */,
 				D253B807275A857500923999 /* Model */,
-				D253B8062759E10C00923999 /* AppDelegate */,
 				D28F39312757ECA200006499 /* FuncAllApp */,
-				D24DA7F627588D0200808ADF /* WriteTextTask */,
-				D24DA7F527588CF800808ADF /* CreateTask */,
-				D28F39302756C51600006499 /* MainView */,
+				D253B8062759E10C00923999 /* AppDelegate */,
 				D2E4552B27555EB600A1B0C1 /* Main.storyboard */,
 				D2E4552E27555EB700A1B0C1 /* Assets.xcassets */,
 				D2E4553027555EB700A1B0C1 /* LaunchScreen.storyboard */,
