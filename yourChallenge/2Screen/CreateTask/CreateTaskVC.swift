@@ -1,13 +1,5 @@
-//
-//  CreateTaskVC.swift
-//  yourChallenge
-//
-//  Created by Kirill Drozdov on 30.11.2021.
-//
 
 import UIKit
-
-
 
 
 class CreateTaskVC: UIViewController { // привет
@@ -41,17 +33,7 @@ class CreateTaskVC: UIViewController { // привет
         navigationItem.hidesBackButton = true
 
         
-//
-//        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
-//        goToTheTaskCreationScreen.isUserInteractionEnabled = true
-//        goToTheTaskCreationScreen.addGestureRecognizer(tapGestureRecognizer)
     }
-            // нажатие на плюс
-//    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer){
-//        let tappedButton = tapGestureRecognizer.view as! UIButton
-//        ShowViewController.showFunc.showMainApp(nameViewIdentifier: "WriteTextTaskVC")
-//
-//    }
     
     
 }

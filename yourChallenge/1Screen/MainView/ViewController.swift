@@ -8,7 +8,6 @@ struct modelData{ // вынести потом в отдельный класс
 //
 
 
-
 class ViewController: UIViewController, SendDataInFirstVCDelegate {
     
     
@@ -38,26 +37,11 @@ class ViewController: UIViewController, SendDataInFirstVCDelegate {
     override func viewDidLoad(){
         super.viewDidLoad()
         
-
-        
   
     }
-            // нажатие на плюс
-//    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer){
-//        let tappedImage = tapGestureRecognizer.view as! UIImageView
-//        print("Hi")
-//
-//
-//    //MARK: - Блок анимации
-//        UIView.animate(withDuration: 2, delay: 0.5, options: .curveEaseInOut) {
-//            self.addTaskButton.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi))
-//        } completion: {  _ in
-//            ShowViewController.showFunc.showMainApp(nameViewIdentifier: "CreateTaskVC")
-//        }
-//
-//    }
+
     
-    
+
     // не работает
     var valueOne = ""
     var valueTwo = ""
