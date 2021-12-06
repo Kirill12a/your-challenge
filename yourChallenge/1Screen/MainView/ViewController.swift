@@ -19,17 +19,11 @@ class ViewController: UIViewController, SendDataInFirstVCDelegate {
     @IBOutlet weak var nextScreenButtonOutlet: UIButton!
     
     var writeScreen = WriteTextTaskVC()
-    
-    
-    
+
     var array4s = [modelData]()
     var model: modelData!
     
-   
-        
-    
-    
-    
+
     override func loadView() {
         super.loadView()
     
@@ -64,7 +58,6 @@ class ViewController: UIViewController, SendDataInFirstVCDelegate {
 //    }
     
     
-    
     // не работает
     var valueOne = ""
     var valueTwo = ""
@@ -80,19 +73,8 @@ class ViewController: UIViewController, SendDataInFirstVCDelegate {
 
     @IBAction func NextScreen(_ sender: Any) {
         
-       
-
     }
     
-  
-    
+
 }
 
-
-
-
-//MARK: - Сделать
-/* MARK: -
- 1) Нужно добавить CollectionView(добавить delegate & dataSource)
- 2) Нужно создать переход с 3-го экрана с передачей данных на 1-эй экран(используя protocol)
- */
