@@ -36,17 +36,22 @@ class CreateTaskVC: UIViewController { // привет
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let backBtn = UIBarButtonItem(title: "", style: UIBarButtonItem.Style.plain, target: navigationController, action: nil)
+        
+        navigationItem.hidesBackButton = true
 
-        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
-        goToTheTaskCreationScreen.isUserInteractionEnabled = true
-        goToTheTaskCreationScreen.addGestureRecognizer(tapGestureRecognizer)
+        
+//
+//        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+//        goToTheTaskCreationScreen.isUserInteractionEnabled = true
+//        goToTheTaskCreationScreen.addGestureRecognizer(tapGestureRecognizer)
     }
             // нажатие на плюс
-    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer){
-        let tappedButton = tapGestureRecognizer.view as! UIButton
-        ShowViewController.showFunc.showMainApp(nameViewIdentifier: "WriteTextTaskVC")
-        
-    }
+//    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer){
+//        let tappedButton = tapGestureRecognizer.view as! UIButton
+//        ShowViewController.showFunc.showMainApp(nameViewIdentifier: "WriteTextTaskVC")
+//
+//    }
     
     
 }

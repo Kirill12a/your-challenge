@@ -1,40 +1,38 @@
 import UIKit
 
 
-struct modelData{
+struct modelData{ // вынести потом в отдельный класс
     var task:String
     var deadLine:String
 }
+//
+
+
 
 class ViewController: UIViewController, SendDataInFirstVCDelegate {
     
     
+    var timer = Timer()
+        let delay = 0.5
+    
+    
+    @IBOutlet weak var nextScreenButtonOutlet: UIButton!
     
     var writeScreen = WriteTextTaskVC()
+    
     
     
     var array4s = [modelData]()
     var model: modelData!
     
-    @IBOutlet weak var addTaskButton: UIImageView!{
-        didSet{
-            print("кнопка создана®")}
+   
         
-    }
-    @IBOutlet weak var doneButton: UIButton!{
-        didSet{}
-        
-    }
-    @IBOutlet weak var historyButton: UIButton!{
-        didSet{}
-        
-    }
+    
     
     
     override func loadView() {
         super.loadView()
-        CorenerRadiusMainTwoButtons.radiusMainTwoButtons.buttonCustomization(button: doneButton, button: historyButton) // радиус для двух кнопок задается с с другого класса.
-        
+    
         print("Создали")
         print("Элементы массива равны: \(array4s)")
         
@@ -46,26 +44,28 @@ class ViewController: UIViewController, SendDataInFirstVCDelegate {
     override func viewDidLoad(){
         super.viewDidLoad()
         
+
         
-        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
-        addTaskButton.isUserInteractionEnabled = true
-        addTaskButton.addGestureRecognizer(tapGestureRecognizer)
+  
     }
             // нажатие на плюс
-    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer){
-        let tappedImage = tapGestureRecognizer.view as! UIImageView
-        print("Hi")
-        
-        
-    //MARK: - Блок анимации
-        UIView.animate(withDuration: 2, delay: 0.5, options: .curveEaseInOut) {
-            self.addTaskButton.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi))
-        } completion: {  _ in
-            ShowViewController.showFunc.showMainApp(nameViewIdentifier: "CreateTaskVC")
-        }
-
-    }
+//    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer){
+//        let tappedImage = tapGestureRecognizer.view as! UIImageView
+//        print("Hi")
+//
+//
+//    //MARK: - Блок анимации
+//        UIView.animate(withDuration: 2, delay: 0.5, options: .curveEaseInOut) {
+//            self.addTaskButton.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi))
+//        } completion: {  _ in
+//            ShowViewController.showFunc.showMainApp(nameViewIdentifier: "CreateTaskVC")
+//        }
+//
+//    }
     
+    
+    
+    // не работает
     var valueOne = ""
     var valueTwo = ""
     func sendData(dataOne: String, dataTwo: String) {
@@ -76,7 +76,23 @@ class ViewController: UIViewController, SendDataInFirstVCDelegate {
         array4s.append(createArray)
         
         print(array4s)
+    }// не работает(выше)
+
+    @IBAction func NextScreen(_ sender: Any) {
+        
+       
+
     }
+    
+  
     
 }
 
+
+
+
+//MARK: - Сделать
+/* MARK: -
+ 1) Нужно добавить CollectionView(добавить delegate & dataSource)
+ 2) Нужно создать переход с 3-го экрана с передачей данных на 1-эй экран(используя protocol)
+ */

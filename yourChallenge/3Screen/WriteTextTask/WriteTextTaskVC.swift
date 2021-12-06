@@ -52,10 +52,40 @@ class WriteTextTaskVC: UIViewController, UITextFieldDelegate {
         UIView.animate(withDuration: 1.5, delay: 0, options: [.beginFromCurrentState], animations: {
             self.view.layoutIfNeeded()
         })
+        
+        
+        
+        let datePicker = UIDatePicker()
+                datePicker.datePickerMode = .date
+                datePicker.addTarget(self, action: #selector(dateChange(datePicker:)), for: UIControl.Event.valueChanged)
+                datePicker.frame.size = CGSize(width: 0, height: 300)
+                datePicker.preferredDatePickerStyle = .wheels
+//                datePicker.maximumDate = Date()
+                
+                writeDataTF.inputView = datePicker
+        writeDataTF.text = formatDate(date: Date()) // todays Date
     }
+    
+    @objc func dateChange(datePicker: UIDatePicker){
+        writeDataTF.text = formatDate(date: datePicker.date)
+        }
+        
+        func formatDate(date: Date) -> String{
+            let formatter = DateFormatter()
+            formatter.dateFormat = "d.M.yy" // правильный формат данных
+            return formatter.string(from: date)
+        }
+    
+    
+    
+    
+    
+    
+    
         // нажатие кнопки
     @IBAction func createTaskButton(_ sender: UIButton) {
-        var viewControllerFirst = ShowViewController.showFunc.showMainApp(nameViewIdentifier: "ViewController")
+//        var viewControllerFirst = ShowViewController.showFunc.showMainApp(nameViewIdentifier: "ViewController")
+        self.navigationController?.popViewController(animated: true)
         
         let textOne = writeTaskTF.text
         let textTwo = writeDataTF.text
