@@ -7,12 +7,15 @@ final class HexStringToUIColor{
     static var hex = HexStringToUIColor()
     /// Принимает строку скопированную из поля hex
     /// - Returns: цвет, который конвертируется в rgb
-    func hexStringToUIColor (hex:String) -> UIColor {
+    func hexStringToUIColor (hex:String) -> UIColor
+    {
         var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
-        if (cString.hasPrefix("#")) {
+        if (cString.hasPrefix("#"))
+        {
             cString.remove(at: cString.startIndex)
         }
-        if ((cString.count) != 6) {
+        if ((cString.count) != 6)
+        {
             return UIColor.gray
         }
         var rgbValue:UInt32 = 0
