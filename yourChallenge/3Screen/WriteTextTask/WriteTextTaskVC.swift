@@ -89,9 +89,7 @@ class WriteTextTaskVC: UIViewController, UITextFieldDelegate {
         self.writeTaskTF.delegate = self
         
         let backBtn = UIBarButtonItem(title: "", style: UIBarButtonItem.Style.plain, target: navigationController, action: nil)
-        
         navigationItem.hidesBackButton = true
-        
     }
     
     /// Чтобы при нажжатие done совершался переход на next textField - ()
@@ -107,7 +105,6 @@ class WriteTextTaskVC: UIViewController, UITextFieldDelegate {
             textField.resignFirstResponder()
         }
         return false
-        
 
     }
     

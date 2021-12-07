@@ -20,6 +20,5 @@ final class ShowViewController{
             window.rootViewController = mainAppViewController
             UIView.transition(with: window, duration: 0.25, options: .transitionCrossDissolve, animations: nil, completion: nil)
         }
-        
     }
 }
