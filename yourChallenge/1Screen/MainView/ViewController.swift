@@ -13,7 +13,6 @@ class ViewController: UIViewController, SendDataInFirstVCDelegate, UICollectionV
     var timer = Timer()
         let delay = 0.5
     
-    
     @IBOutlet weak var nextScreenButtonOutlet: UIButton!
     
     var writeScreen = WriteTextTaskVC()
@@ -40,7 +39,6 @@ class ViewController: UIViewController, SendDataInFirstVCDelegate, UICollectionV
         
     }
     
-    
     override func viewDidLoad(){
         super.viewDidLoad()
         self.collectionView.dataSource = self
@@ -57,9 +55,7 @@ class ViewController: UIViewController, SendDataInFirstVCDelegate, UICollectionV
             }
         }
     }
-    
-    // не работает
-    var valueOne = ""
+        var valueOne = ""
     var valueTwo = ""
     func sendData(dataOne: String, dataTwo: String) {
         valueOne = dataOne
@@ -76,7 +72,6 @@ class ViewController: UIViewController, SendDataInFirstVCDelegate, UICollectionV
     @IBAction func NextScreen(_ sender: Any) {
         // я сдела переход через storyboard
     }
-    
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -100,10 +95,5 @@ class ViewController: UIViewController, SendDataInFirstVCDelegate, UICollectionV
             destination.delegate = self
         }
     }
-    
-    
-    
-    
-
 }
 
