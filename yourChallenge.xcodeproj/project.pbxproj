@@ -20,6 +20,7 @@
 		D2E4552F27555EB700A1B0C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2E4552E27555EB700A1B0C1 /* Assets.xcassets */; };
 		D2E4553227555EB700A1B0C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2E4553027555EB700A1B0C1 /* LaunchScreen.storyboard */; };
 		D2E4553B27556CD400A1B0C1 /* CorenerRadiusMainTwoButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E4553A27556CD400A1B0C1 /* CorenerRadiusMainTwoButtons.swift */; };
+		D2F2B7EE275EB40100EEE118 /* CollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F2B7ED275EB40100EEE118 /* CollectionVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		D2E4553127555EB700A1B0C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D2E4553327555EB700A1B0C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2E4553A27556CD400A1B0C1 /* CorenerRadiusMainTwoButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorenerRadiusMainTwoButtons.swift; sourceTree = "<group>"; };
+		D2F2B7ED275EB40100EEE118 /* CollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionVC.swift; sourceTree = "<group>"; };
 		F12BE76FC6E6CB05831BBE3B /* Pods_yourChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_yourChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -168,14 +170,15 @@
 			children = (
 				D2BD63F1275D470400658052 /* 1Screen */,
 				D2BD63F3275D471900658052 /* 3Screen */,
-				D2BD63F2275D471200658052 /* 2Screen */,
 				D253B807275A857500923999 /* Model */,
+				D2BD63F2275D471200658052 /* 2Screen */,
 				D28F39312757ECA200006499 /* FuncAllApp */,
 				D253B8062759E10C00923999 /* AppDelegate */,
 				D2E4552B27555EB600A1B0C1 /* Main.storyboard */,
 				D2E4552E27555EB700A1B0C1 /* Assets.xcassets */,
 				D2E4553027555EB700A1B0C1 /* LaunchScreen.storyboard */,
 				D2E4553327555EB700A1B0C1 /* Info.plist */,
+				D2F2B7ED275EB40100EEE118 /* CollectionVC.swift */,
 			);
 			path = yourChallenge;
 			sourceTree = "<group>";
@@ -290,6 +293,7 @@
 				D2E4552A27555EB600A1B0C1 /* ViewController.swift in Sources */,
 				D253B809275A858E00923999 /* ModelWriteDataTask.swift in Sources */,
 				D2E4552627555EB600A1B0C1 /* AppDelegate.swift in Sources */,
+				D2F2B7EE275EB40100EEE118 /* CollectionVC.swift in Sources */,
 				D28F392D2756B06B00006499 /* HexStringToUIColor.swift in Sources */,
 				D24DA7F427588CD000808ADF /* WriteTextTaskVC.swift in Sources */,
 				D28F392B275635EB00006499 /* CreateTaskVC.swift in Sources */,

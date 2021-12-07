@@ -38,27 +38,53 @@
                                 <buttonConfiguration key="configuration" style="plain" image="CircleAdd"/>
                                 <connections>
                                     <action selector="NextScreen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YuC-E4-RSI"/>
-                                    <segue destination="wSG-yh-r2e" kind="show" id="S9t-OL-NkE"/>
+                                    <segue destination="wSG-yh-r2e" kind="show" identifier="segue" id="S9t-OL-NkE"/>
                                 </connections>
                             </button>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="A6L-Fs-m1a">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="A6L-Fs-m1a">
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="238"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Zye-SU-0Ml">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="390" id="5Y1-tz-xrE"/>
+                                    <constraint firstAttribute="height" constant="238" id="xk8-h4-9jv"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Zye-SU-0Ml">
                                     <size key="itemSize" width="128" height="128"/>
+                                    <size key="estimatedItemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="K2f-bS-2Dw">
-                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="K2f-bS-2Dw" customClass="CollectionVC" customModule="yourChallenge" customModuleProvider="target">
+                                        <rect key="frame" x="10" y="55" width="128" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="uRl-Wf-JpN">
                                             <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wKZ-st-nbs">
+                                                    <rect key="frame" x="31" y="8" width="42" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Hy-cp-WHF">
+                                                    <rect key="frame" x="31" y="79" width="42" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </collectionViewCellContentView>
+                                        <size key="customSize" width="128" height="128"/>
+                                        <connections>
+                                            <outlet property="oneCell" destination="wKZ-st-nbs" id="O3q-Zh-j0A"/>
+                                            <outlet property="twoCell" destination="1Hy-cp-WHF" id="Px1-J9-aap"/>
+                                            <outlet property="viewCell" destination="uRl-Wf-JpN" id="u3x-sl-jf3"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -69,13 +95,18 @@
                             <constraint firstItem="NPe-JI-CER" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="4nS-fl-8vw"/>
                             <constraint firstItem="NPe-JI-CER" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="8e8-df-VYv"/>
                             <constraint firstItem="dAo-dK-ivL" firstAttribute="leading" secondItem="NPe-JI-CER" secondAttribute="trailing" constant="18" id="Lmx-40-bUP"/>
+                            <constraint firstItem="A6L-Fs-m1a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MRy-Ng-FWY"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dAo-dK-ivL" secondAttribute="bottom" constant="50" id="SeN-HQ-p1P"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dAo-dK-ivL" secondAttribute="trailing" constant="20" id="TsJ-Yz-Igt"/>
+                            <constraint firstItem="A6L-Fs-m1a" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="uwB-5S-usU"/>
+                            <constraint firstItem="A6L-Fs-m1a" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="yCw-7A-DiC"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="hqK-el-5hF"/>
                     <connections>
+                        <outlet property="collectionView" destination="A6L-Fs-m1a" id="4KN-ql-Sr5"/>
                         <outlet property="nextScreenButtonOutlet" destination="Ph4-kU-qYZ" id="q9L-sQ-pEY"/>
+                        <outlet property="topConstraint" destination="yCw-7A-DiC" id="MAQ-a5-yci"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

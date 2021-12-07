@@ -1,10 +1,7 @@
 
 import UIKit
 
-
-class CreateTaskVC: UIViewController { // привет
-    
-    
+class CreateTaskVC: UIViewController {
     
     @IBOutlet weak var welcomeTextSV: UIStackView! {
         didSet{
@@ -21,19 +18,12 @@ class CreateTaskVC: UIViewController { // привет
     @IBOutlet weak var goToTheTaskCreationScreen: UIButton!{
         didSet{
             goToTheTaskCreationScreen.layer.cornerRadius = 15
-
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         let backBtn = UIBarButtonItem(title: "", style: UIBarButtonItem.Style.plain, target: navigationController, action: nil)
-        
         navigationItem.hidesBackButton = true
-
-        
     }
-    
-    
 }

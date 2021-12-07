@@ -42,18 +42,14 @@ class WriteTextTaskVC: UIViewController, UITextFieldDelegate {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        super.viewDidLoad()
         self.trallingRightImageConstarint.constant = 8
         self.leadingLeftImageConstraint.constant =  8
         self.constraintSecondTFTralling.constant = 50
         self.constarintButtonADdTask.constant = 372
-       
         
         UIView.animate(withDuration: 1.5, delay: 0, options: [.beginFromCurrentState], animations: {
             self.view.layoutIfNeeded()
         })
-        
-        
         
         let datePicker = UIDatePicker()
                 datePicker.datePickerMode = .date
@@ -76,12 +72,6 @@ class WriteTextTaskVC: UIViewController, UITextFieldDelegate {
             return formatter.string(from: date)
         }
     
-    
-    
-    
-    
-    
-    
         // нажатие кнопки
     @IBAction func createTaskButton(_ sender: UIButton) {
 //        var viewControllerFirst = ShowViewController.showFunc.showMainApp(nameViewIdentifier: "ViewController")
@@ -97,6 +87,10 @@ class WriteTextTaskVC: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         self.writeDataTF.delegate = self
         self.writeTaskTF.delegate = self
+        
+        let backBtn = UIBarButtonItem(title: "", style: UIBarButtonItem.Style.plain, target: navigationController, action: nil)
+        
+        navigationItem.hidesBackButton = true
         
     }
     
