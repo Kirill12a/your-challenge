@@ -6,5 +6,6 @@ target 'yourChallenge' do
   use_frameworks!
 
   # Pods for yourChallenge
+pod 'RealmSwift'
 
 end
