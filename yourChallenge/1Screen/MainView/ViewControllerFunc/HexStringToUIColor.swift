@@ -2,6 +2,9 @@
 import Foundation
 import UIKit
 
+// удалить
+
+
 /// Класс, который содержит func, которая делает цвет по hex
 final class HexStringToUIColor{
     static var hex = HexStringToUIColor()
