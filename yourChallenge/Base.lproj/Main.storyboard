@@ -31,21 +31,12 @@
                                     <constraint firstAttribute="height" constant="237" id="elM-I8-ucu"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ph4-kU-qYZ">
-                                <rect key="frame" x="96" y="304" width="198" height="184"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="CircleAdd"/>
-                                <connections>
-                                    <action selector="NextScreen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YuC-E4-RSI"/>
-                                    <segue destination="wSG-yh-r2e" kind="show" identifier="segue" id="S9t-OL-NkE"/>
-                                </connections>
-                            </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="A6L-Fs-m1a">
-                                <rect key="frame" x="0.0" y="0.0" width="390" height="238"/>
+                                <rect key="frame" x="0.0" y="-262" width="390" height="262"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="390" id="5Y1-tz-xrE"/>
-                                    <constraint firstAttribute="height" constant="238" id="xk8-h4-9jv"/>
+                                    <constraint firstAttribute="height" constant="262" id="xk8-h4-9jv"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Zye-SU-0Ml">
                                     <size key="itemSize" width="128" height="128"/>
@@ -56,7 +47,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="K2f-bS-2Dw" customClass="CollectionVC" customModule="yourChallenge" customModuleProvider="target">
-                                        <rect key="frame" x="10" y="55" width="128" height="128"/>
+                                        <rect key="frame" x="10" y="67" width="128" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="uRl-Wf-JpN">
                                             <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
@@ -93,22 +84,30 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ph4-kU-qYZ">
+                                <rect key="frame" x="96" y="294" width="207" height="194"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="CircleAdd"/>
+                                <connections>
+                                    <action selector="NextScreen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YuC-E4-RSI"/>
+                                    <segue destination="wSG-yh-r2e" kind="show" identifier="segue" id="S9t-OL-NkE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.34810784459999999" green="0.46143597359999999" blue="0.80227673050000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="NPe-JI-CER" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="4nS-fl-8vw"/>
                             <constraint firstItem="Ph4-kU-qYZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="96" id="5NL-jO-yWd"/>
-                            <constraint firstItem="Ph4-kU-qYZ" firstAttribute="centerX" secondItem="A6L-Fs-m1a" secondAttribute="centerX" id="7QO-Yh-alX"/>
                             <constraint firstItem="NPe-JI-CER" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="8e8-df-VYv"/>
                             <constraint firstItem="dAo-dK-ivL" firstAttribute="leading" secondItem="NPe-JI-CER" secondAttribute="trailing" constant="18" id="Lmx-40-bUP"/>
                             <constraint firstItem="A6L-Fs-m1a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MRy-Ng-FWY"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dAo-dK-ivL" secondAttribute="bottom" constant="50" id="SeN-HQ-p1P"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dAo-dK-ivL" secondAttribute="trailing" constant="20" id="TsJ-Yz-Igt"/>
-                            <constraint firstItem="Ph4-kU-qYZ" firstAttribute="top" secondItem="A6L-Fs-m1a" secondAttribute="bottom" constant="66" id="oyf-Vq-Km2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ph4-kU-qYZ" secondAttribute="trailing" constant="87" id="auU-KP-ycI"/>
                             <constraint firstItem="dAo-dK-ivL" firstAttribute="top" secondItem="Ph4-kU-qYZ" secondAttribute="bottom" constant="35" id="pYG-Zt-Hdu"/>
                             <constraint firstItem="A6L-Fs-m1a" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="uwB-5S-usU"/>
-                            <constraint firstItem="A6L-Fs-m1a" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="yCw-7A-DiC"/>
+                            <constraint firstItem="A6L-Fs-m1a" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="-262" id="yCw-7A-DiC"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="hqK-el-5hF"/>

@@ -6,34 +6,28 @@ import RealmSwift
 // потом добавить удаление данных при нажатие
 
 
+
+
+//MARK: Сделать в классе отдельном
 @objcMembers
 class modelData: Object{ // вынести потом в отдельный класс
     dynamic  var task = ""
     dynamic var deadLine = ""
 }
-
+// -----------------------------//
 class ViewController: UIViewController, SendDataInFirstVCDelegate, UICollectionViewDataSource, UICollectionViewDelegate{
-    
-    
+
     @IBOutlet weak var collectionView: UICollectionView!
     
-    
     var realm: Realm!
-    
     var toDoList: Results<modelData>{
         get{
             return realm.objects(modelData.self)
         }
-    }
-    
+    } // модель данных Realm
     
     @IBOutlet weak var nextScreenButtonOutlet: UIButton!
-    
-    var writeScreen = WriteTextTaskVC()
-
-    var array4s = [modelData]()
-    var model: modelData!
-    
+   
 
     @IBOutlet weak var topConstraint: NSLayoutConstraint!
     override func loadView() {
@@ -41,50 +35,52 @@ class ViewController: UIViewController, SendDataInFirstVCDelegate, UICollectionV
         
         collectionView.backgroundColor = .yellow
         collectionView.layer.cornerRadius = 30
-        if !array4s.isEmpty{
-            print("Пустой ")
-            topConstraint.constant = 200
-        }else{
-            print("не Пустой ")
+        topConstraint.constant = -20000
 
-//            topConstraint.constant = -300
-            topConstraint.constant = 50
+        
 
-            
-        }
         
     }
-    
+
     override func viewDidLoad(){
         super.viewDidLoad()
         self.collectionView.dataSource = self
         self.collectionView.delegate = self
         
         realm = try! Realm()
+        
+        if !toDoList.isEmpty{
+            print("Не пустой")
+            topConstraint.constant = 0
+            
+            UIView.animate(withDuration: 3) {
+                self.view.layoutIfNeeded()
+            }
+            print(toDoList)
+        }else{
+            print("пустой")
+            
+            topConstraint.constant = 0
+            UIView.animate(withDuration: 3) {
+                self.view.layoutIfNeeded()
+            }
 
+        }
   
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        if !array4s.isEmpty{
-            topConstraint.constant = 0
-            UIView.animate(withDuration: 2) {
-                self.view.layoutIfNeeded()
-            }
-        }
+       
     }
     
     
-    
+
     var valueOne = ""
     var valueTwo = ""
     func sendData(dataOne: String, dataTwo: String) {
         valueOne = dataOne
         valueTwo = dataTwo
-        
-//        var createArray = modelData(task: valueOne, deadLine: valueTwo)
-//        array4s.append(createArray)
         
         let newToDoListItem = modelData()
         newToDoListItem.task = valueOne
@@ -94,9 +90,7 @@ class ViewController: UIViewController, SendDataInFirstVCDelegate, UICollectionV
             self.realm.add(newToDoListItem)
             self.collectionView.insertItems(at: [IndexPath.init(row: self.toDoList.count - 1, section: 0)])
         })
-        
-        
-        
+
         DispatchQueue.main.async {
             self.collectionView.reloadData()
         }
@@ -105,7 +99,6 @@ class ViewController: UIViewController, SendDataInFirstVCDelegate, UICollectionV
     @IBAction func NextScreen(_ sender: Any) {
         // я сдела переход через storyboard
     }
-    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return toDoList.count
@@ -124,6 +117,16 @@ class ViewController: UIViewController, SendDataInFirstVCDelegate, UICollectionV
         cell.viewCell.layer.borderWidth = 2
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        try! realm.write({
+            let item = toDoList[indexPath.row]
+            self.realm.delete(toDoList[indexPath.row])
+        })
+        DispatchQueue.main.async {
+            self.collectionView.reloadData()
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
