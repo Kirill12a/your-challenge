@@ -11,9 +11,7 @@ protocol  SendDataInFirstVCDelegate{
     func sendData(dataOne: String, dataTwo: String)
 }
 
-/// Экран, на котором идет заполнение задачаи 
 class WriteTextTaskVC: UIViewController, UITextFieldDelegate {
-    var modelData: ModelWriteDataTask?
     
     var delegate: SendDataInFirstVCDelegate? // delegate
 
@@ -74,21 +72,19 @@ class WriteTextTaskVC: UIViewController, UITextFieldDelegate {
     
         // нажатие кнопки
     @IBAction func createTaskButton(_ sender: UIButton) {
-//        var viewControllerFirst = ShowViewController.showFunc.showMainApp(nameViewIdentifier: "ViewController")
         self.navigationController?.popViewController(animated: true)
-        
         let textOne = writeTaskTF.text
         let textTwo = writeDataTF.text
         delegate?.sendData(dataOne: textOne!, dataTwo: textTwo!)
-
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.writeDataTF.delegate = self
         self.writeTaskTF.delegate = self
         
-        let backBtn = UIBarButtonItem(title: "", style: UIBarButtonItem.Style.plain, target: navigationController, action: nil)
+        _ = UIBarButtonItem(title: "", style: UIBarButtonItem.Style.plain, target: navigationController, action: nil)
         navigationItem.hidesBackButton = true
     }
     

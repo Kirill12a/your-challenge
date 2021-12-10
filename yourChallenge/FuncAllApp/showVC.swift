@@ -8,8 +8,9 @@
 import Foundation
 import UIKit
 
+
+// будет юзаться для перехода в oneboard
 final class ShowViewController{
-        
     static var showFunc = ShowViewController()
     
     func showMainApp(nameViewIdentifier identifierView: String){

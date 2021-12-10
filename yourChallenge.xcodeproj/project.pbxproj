@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		A715D00698FB1172C63C7134 /* Pods_yourChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F12BE76FC6E6CB05831BBE3B /* Pods_yourChallenge.framework */; };
+		D2016BC227638EA100A07B75 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2016BC127638EA000A07B75 /* ModelData.swift */; };
 		D24DA7F427588CD000808ADF /* WriteTextTaskVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24DA7F327588CD000808ADF /* WriteTextTaskVC.swift */; };
-		D253B809275A858E00923999 /* ModelWriteDataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = D253B808275A858E00923999 /* ModelWriteDataTask.swift */; };
 		D28F392B275635EB00006499 /* CreateTaskVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28F392A275635EB00006499 /* CreateTaskVC.swift */; };
 		D28F392D2756B06B00006499 /* HexStringToUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28F392C2756B06B00006499 /* HexStringToUIColor.swift */; };
 		D28F39332757ECBF00006499 /* showVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28F39322757ECBF00006499 /* showVC.swift */; };
@@ -26,8 +26,8 @@
 /* Begin PBXFileReference section */
 		879E55F6E95DBD3CDDC8D303 /* Pods-yourChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yourChallenge.release.xcconfig"; path = "Target Support Files/Pods-yourChallenge/Pods-yourChallenge.release.xcconfig"; sourceTree = "<group>"; };
 		9D58078DA2C4478DBF7572B7 /* Pods-yourChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yourChallenge.debug.xcconfig"; path = "Target Support Files/Pods-yourChallenge/Pods-yourChallenge.debug.xcconfig"; sourceTree = "<group>"; };
+		D2016BC127638EA000A07B75 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		D24DA7F327588CD000808ADF /* WriteTextTaskVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteTextTaskVC.swift; sourceTree = "<group>"; };
-		D253B808275A858E00923999 /* ModelWriteDataTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelWriteDataTask.swift; sourceTree = "<group>"; };
 		D28F392A275635EB00006499 /* CreateTaskVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTaskVC.swift; sourceTree = "<group>"; };
 		D28F392C2756B06B00006499 /* HexStringToUIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexStringToUIColor.swift; sourceTree = "<group>"; };
 		D28F39322757ECBF00006499 /* showVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = showVC.swift; sourceTree = "<group>"; };
@@ -101,7 +101,7 @@
 		D253B807275A857500923999 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D253B808275A858E00923999 /* ModelWriteDataTask.swift */,
+				D2016BC127638EA000A07B75 /* ModelData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -309,11 +309,11 @@
 			files = (
 				D2E4553B27556CD400A1B0C1 /* CorenerRadiusMainTwoButtons.swift in Sources */,
 				D2E4552A27555EB600A1B0C1 /* ViewController.swift in Sources */,
-				D253B809275A858E00923999 /* ModelWriteDataTask.swift in Sources */,
 				D2E4552627555EB600A1B0C1 /* AppDelegate.swift in Sources */,
 				D2F2B7EE275EB40100EEE118 /* CollectionVC.swift in Sources */,
 				D28F392D2756B06B00006499 /* HexStringToUIColor.swift in Sources */,
 				D24DA7F427588CD000808ADF /* WriteTextTaskVC.swift in Sources */,
+				D2016BC227638EA100A07B75 /* ModelData.swift in Sources */,
 				D28F392B275635EB00006499 /* CreateTaskVC.swift in Sources */,
 				D2E4552827555EB600A1B0C1 /* SceneDelegate.swift in Sources */,
 				D28F39332757ECBF00006499 /* showVC.swift in Sources */,
