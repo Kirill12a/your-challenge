@@ -1,6 +1,8 @@
 
 import UIKit
 
+// из этого в V2 будет onboarding
+
 class CreateTaskVC: UIViewController {
     
     @IBOutlet weak var welcomeTextSV: UIStackView! {

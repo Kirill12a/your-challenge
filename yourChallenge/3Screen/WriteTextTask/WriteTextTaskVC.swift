@@ -13,51 +13,39 @@ protocol  SendDataInFirstVCDelegate{
 
 class WriteTextTaskVC: UIViewController, UITextFieldDelegate {
     
-    var delegate: SendDataInFirstVCDelegate? // delegate
+    var delegate: SendDataInFirstVCDelegate?
 
-    
     @IBOutlet weak var constarintButtonADdTask: NSLayoutConstraint!
     @IBOutlet weak var constraintSecondTFTralling: NSLayoutConstraint!
-  
-    @IBOutlet weak var writeTaskTF: UITextField!{
-        didSet{
-            writeTaskTF.layer.cornerRadius = 21.0
-        }
-    }
-    @IBOutlet weak var writeDataTF: UITextField!{
-        didSet{
-        writeDataTF.layer.cornerRadius = 21.0
-        }
-    }
-    @IBOutlet weak var createTaskButtonOutlet: UIButton!{
-        didSet{
-            createTaskButtonOutlet.layer.cornerRadius = 12
-        }
-    }
+    @IBOutlet weak var writeTaskTF: UITextField!{didSet{writeTaskTF.layer.cornerRadius = 21.0}}
+    @IBOutlet weak var writeDataTF: UITextField!{didSet{writeDataTF.layer.cornerRadius = 21.0}}
+    @IBOutlet weak var createTaskButtonOutlet: UIButton!{didSet{createTaskButtonOutlet.layer.cornerRadius = 12}}
     @IBOutlet weak var trallingRightImageConstarint: NSLayoutConstraint!
-    
+
     @IBOutlet weak var leadingLeftImageConstraint: NSLayoutConstraint!
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.trallingRightImageConstarint.constant = 8
-        self.leadingLeftImageConstraint.constant =  8
-        self.constraintSecondTFTralling.constant = 50
-        self.constarintButtonADdTask.constant = 372
+        self.leadingLeftImageConstraint.constant   = 8
+        self.constraintSecondTFTralling.constant   = 50
+        self.constarintButtonADdTask.constant      = 372
         
-        UIView.animate(withDuration: 1.5, delay: 0, options: [.beginFromCurrentState], animations: {
-            self.view.layoutIfNeeded()
+        UIView.animate(withDuration: 1.5,
+                       delay: 0,
+                       options: [.beginFromCurrentState],
+                       animations: {
+                                    self.view.layoutIfNeeded()
         })
         
         let datePicker = UIDatePicker()
-                datePicker.datePickerMode = .date
+                datePicker.datePickerMode           = .date
                 datePicker.addTarget(self, action: #selector(dateChange(datePicker:)), for: UIControl.Event.valueChanged)
-                datePicker.frame.size = CGSize(width: 0, height: 300)
+                datePicker.frame.size               = CGSize(width: 0, height: 300)
                 datePicker.preferredDatePickerStyle = .wheels
-//                datePicker.maximumDate = Date()
                 
-                writeDataTF.inputView = datePicker
-        writeDataTF.text = formatDate(date: Date()) // todays Date
+        writeDataTF.inputView = datePicker
+        writeDataTF.text      = formatDate(date: Date())
     }
     
     @objc func dateChange(datePicker: UIDatePicker){
@@ -65,12 +53,12 @@ class WriteTextTaskVC: UIViewController, UITextFieldDelegate {
         }
         
         func formatDate(date: Date) -> String{
-            let formatter = DateFormatter()
-            formatter.dateFormat = "d.M.yy" // правильный формат данных
+            let formatter        = DateFormatter()
+            formatter.dateFormat = "d.M.yy"
             return formatter.string(from: date)
         }
     
-        // нажатие кнопки
+        
     @IBAction func createTaskButton(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
         let textOne = writeTaskTF.text
@@ -87,10 +75,7 @@ class WriteTextTaskVC: UIViewController, UITextFieldDelegate {
         _ = UIBarButtonItem(title: "", style: UIBarButtonItem.Style.plain, target: navigationController, action: nil)
         navigationItem.hidesBackButton = true
     }
-    
-    /// Чтобы при нажжатие done совершался переход на next textField - ()
-    /// - Parameter textField: текст филд, заданный в коде
-    /// - Returns: да или нет
+
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         switch textField{
         case writeTaskTF:
@@ -106,10 +91,10 @@ class WriteTextTaskVC: UIViewController, UITextFieldDelegate {
     
     override func loadView() {
         super.loadView()
-        trallingRightImageConstarint.constant = -200
-        leadingLeftImageConstraint.constant = -200
-        constraintSecondTFTralling.constant = -200
-        constarintButtonADdTask.constant = -200
+        trallingRightImageConstarint.constant = -300
+        leadingLeftImageConstraint.constant   = -300
+        constraintSecondTFTralling.constant   = -300
+        constarintButtonADdTask.constant      = -300
     }
 }
 
